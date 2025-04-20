@@ -1,7 +1,4 @@
-// EatWise Food Nutrition Mobile App
-// A React Native implementation based on the wireframes
 
-// App.js - Main Entry Point
 import React, { useState, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,7 +16,7 @@ import OnboardingScreen from './screens/OnboardingScreen';
 import PermissionsScreen from './screens/PermissionsScreen';
 import SplashScreen from './screens/SplashScreen';
 
-// Services
+
 import { initFoodDatabase } from './services/FoodDatabaseService';
 
 const Stack = createStackNavigator();
@@ -64,13 +61,11 @@ function App() {
   const [hasPermissions, setHasPermissions] = useState(false);
 
   useEffect(() => {
-    // Initialize the food database
+   
     initFoodDatabase();
-    
-    // Check if user has completed onboarding
+
     const checkOnboarding = async () => {
       try {
-        // In a real app, this would check AsyncStorage or similar
         setHasOnboarded(false);
         setTimeout(() => setIsLoading(false), 2000);
       } catch (error) {
