@@ -104,7 +104,4 @@ export default App;
 
 
 
-// services/FoodDatabaseService.js
-// This service would normally be connected to a real API
-// For demo purposes, we'll use mocked data
 
